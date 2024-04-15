@@ -38,4 +38,197 @@ Qus 4.5	Given a 2D matrix representing a map where '1's represent land and '0's 
 
 Qus 4.6	Write a program that checks whether a given square matrix is a magic square or not. A magic square is a square matrix where the sum of each row, each column, and both diagonals is the same.
 
+public sta4c void main(String[] args) {
+ System.out.println("Prime numbers between 1 and 100 using for loop:");
+ printPrimesUsingForLoop();
+ System.out.println("\nPrime numbers between 1 and 100 using while loop:");
+ printPrimesUsingWhileLoop();
+ }
+ public sta4c void printPrimesUsingForLoop() {
+ for (int i = 2; i <= 100; i++) {
+ if (isPrime(i)) {
+ System.out.print(i + " ");
+ }
+ }
+ }
+ public sta4c void printPrimesUsingWhileLoop() {
+ int number = 2;
+ while (number <= 100) {
+ if (isPrime(number)) {
+ System.out.print(number + " ");
+ }
+ number++;
+ }
+ }
+ public sta4c boolean isPrime(int num) {
+ if (num <= 1) {
+ return false;
+ }
+ for (int i = 2; i <= Math.sqrt(num); i++) {
+ if (num % i == 0) {
+ return false;
+ }
+ }
+ return true;
+public sta4c void main(String[] args) {
+ int numRows = 5; 
+ printPascalsTriangle(numRows);
+ }
+ public sta4c void printPascalsTriangle(int numRows) {
+ for (int i = 0; i < numRows; i++) {
+ int number = 1;
+ for (int j = 0; j <= i; j++) {
+ System.out.print(number + " ");
+ number = number * (i - j) / (j + 1);
+ }
+ System.out.println();
+ }
+ }
+}
+Qus 1.3 Implement the factorial calculaFon using recursion instead of loops.
+Compare the performance and resource usage with the loop-based version.
+Ans.
+import java.u4l.Scanner;
+public class Factorial {
+ public sta4c void main(String ar[]) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.print("Enter a number: ");
+ int n = scanner.nextInt();
+ long factorial = calculate(n);
+ System.out.println("Factorial of " + n + " is: " + factorial);
+ scanner.close();
+ }
+ public sta4c long calculate(int n) {
+ if (n == 0 || n == 1) {
+ return 1;
+ } else {
+ return n * calculat
 
+
+
+ import java.u4l.Scanner;
+
+public class PrimeFactors {
+
+ public sta4c void main(String[] args) {
+
+ Scanner scanner = new Scanner(System.in);
+
+ System.out.print("Enter a number to find its prime factors: ");
+
+ int number = scanner.nextInt();
+
+ System.out.print("Prime factors of " + number + " are: ");
+
+ findPrimeFactors(number);
+
+ }
+
+ public sta4c void findPrimeFactors(int number) {
+
+ int factor = 2;
+
+ while (number > 1) {
+
+ if (number % factor == 0) {
+
+ System.out.print(factor + " ");
+
+ number /= factor;
+
+ } else {
+
+ factor++;
+
+ }
+
+ }
+
+ }
+
+}
+
+
+
+
+public class SimpleCalculator {
+
+ public sta4c void main(String ar[]) {
+
+ Scanner scanner = new Scanner(System.in);
+
+ while (true) {
+
+ System.out.println("\nMenu:");
+
+ System.out.println("1. Addi4on (+)");
+
+ System.out.println("2. Subtrac4on (-)");
+
+ System.out.println("3. Mul4plica4on (*)");
+
+ System.out.println("4. Division (/)");
+
+ System.out.println("5. Exit");
+
+ System.out.print("Enter your choice: ");
+
+ int choice = scanner.nextInt();
+
+ if (choice == 5) {
+
+ System.out.println("Exited...");
+
+ break;
+
+ }
+
+ System.out.print("Enter 1st no.: ");
+
+ double num1 = scanner.nextDouble();
+
+ System.out.print("Enter 2nd no.: ");
+
+ double num2 = scanner.nextDouble();
+
+ double result = 0;
+
+ switch (choice) {
+
+ case 1:
+
+ result = num1 + num2;
+
+ System.out.println("Result: " + result);
+
+ break;
+
+ case 2:
+
+ result = num1 - num2;
+
+ System.out.println("Result: " + result);
+
+ break;
+
+ case 3:
+
+ result = num1 * num2;
+
+ System.out.println("Result: " + result);
+
+ break;
+
+ case 4:
+
+ if (num2 != 0) {
+
+ result = num1 / num2;
+
+
+
+
+
+
+
+ 
